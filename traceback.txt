@@ -1,0 +1,26 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+ScriptError: Name (u'game/custom_screens.rpy', 1647930445, 0) is defined twice, at game/audio/custom_screens.rpyc:1 and game/custom_screens.rpy:1.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "renpy/bootstrap.py", line 331, in bootstrap
+    renpy.main.main()
+  File "renpy/main.py", line 492, in main
+    renpy.game.script.load_script() # sets renpy.game.script.
+  File "renpy/script.py", line 283, in load_script
+    self.load_appropriate_file(".rpyc", ".rpy", dir, fn, initcode)
+  File "renpy/script.py", line 797, in load_appropriate_file
+    self.finish_load(stmts, initcode, filename=lastfn)
+  File "renpy/script.py", line 473, in finish_load
+    check_name(node)
+  File "renpy/script.py", line 452, in check_name
+    bad_node.filename, bad_node.linenumber))
+ScriptError: Name (u'game/custom_screens.rpy', 1647930445, 0) is defined twice, at game/audio/custom_screens.rpyc:1 and game/custom_screens.rpy:1.
+
+Windows-10-10.0.22000
+Ren'Py 7.4.11.2266
+ 
+Tue Mar 22 10:30:12 2022
